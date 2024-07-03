@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cmcraft</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/agencydark.css" rel="stylesheet">
+<link href="css/nik_dop.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeInOutCirc');
+   });
+   $("a[href*='#services']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $('#MegaMenu1 .submenu ul li h2 a').addClass('ui-widget-header');
+   $('#MegaMenu1 .submenu ul li a').hover(function()
+   {
+      $(this).addClass('ui-state-hover');
+   }, function()
+   {
+      $(this).removeClass('ui-state-hover');
+   });
+   $('.ui-state-default').hover(function()
+   {
+      $(this).addClass('ui-state-hover');
+   }, function()
+   {
+      $(this).removeClass('ui-state-hover');
+   });
+   $('#MegaMenu1 li').hover(function()
+   {
+      var top = $(this).find('.button').outerHeight();
+      $(this).find('.submenu').css( {'top': top });
+      $(this).find('.submenu').stop().fadeTo('fast', 1).show();
+      var maxWidth = 0;
+      $(this).find('ul').each(function()
+      {
+         $(this).find('li').each(function()
+         {
+            $(this).css('width', 'auto');
+            if ($(this).width() > maxWidth)
+               maxWidth = $(this).width();
+         });
+      });
+      $(this).find('ul').each(function()
+      {
+         $(this).find('li').width(maxWidth);
+         $(this).css({'width' : maxWidth+4});
+      });
+      if ($(this).find('.row').length > 0 )
+      {
+         var maxRowWidth = 0;
+         $(this).find('.row').each(function()
+         {
+            var width = 0;
+            $(this).find('ul').each(function()
+            {
+               width += $(this).width();
+            });
+            if (width > maxRowWidth)
+            {
+               maxRowWidth = width;
+            }
+         });
+         $(this).find('.submenu').css({'width' : maxRowWidth});
+         $(this).find('.row:last').css({'margin': '0'});
+      }
+      else
+      {
+         var width = 0;
+         $(this).find('ul').each(function()
+         {
+            width += $(this).width();
+         });
+         $(this).find('.submenu').css({'width' : width});
+      }
+      $(this).find('.submenu').slideDown();
+   }, function()
+   {
+      $(this).find('.submenu').stop().fadeTo('fast', 0, function()
+      {
+         $(this).hide();
+      });
+   })
+   $('#MegaMenu1 li .submenu').hide();
+   $('#MegaMenu1-nav').click(function()
+   {
+      $('body').removeClass('overflow-no-scroll');
+      $('#wb_MegaMenu1').removeClass('open');
+   });
+   $('#MegaMenu1-hamburger').click(function()
+   {
+      $('body').addClass('overflow-no-scroll');
+      $('#wb_MegaMenu1').addClass('open');
+   });
+   $("a[href*='#LayoutGrid1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {$('#preloader').remove();}
+});
+$(window).on('load', function()
+{
+   $('#preloader').remove();
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="col-1">
+<div id="wb_MegaMenu1" style="display:inline-block;width:100%;text-align:center;z-index:0;">
+<div id="MegaMenu1-hamburger">
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+</div>
+<div id="MegaMenu1-nav">
+<div id="MegaMenu1-close"><a role="button" aria-hidden="true" href="#">&times;</a></div>
+<ul role="menubar" class="ui-widget" id="MegaMenu1">
+<li role="menuitem">
+<a href="./index.html" class="nav-link button ui-state-default">Главная</a>
+</li>
+<li role="menuitem">
+<a href="./mods.html" class="nav-link button ui-state-default">К модификациям</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_services">
+<div id="services">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_Card1" style="display:flex;width:100%;z-index:1;" class="card">
+   <div id="Card1-card-body">
+      <div id="Card1-card-item0">Основная Часть</div>
+      <div id="Card1-card-item1">Оптимизация, библиотеки и утилиты<br></div>
+      <div id="Card1-card-item2"><a href="https://disk.yandex.by/d/qPjDbso7vYi3lA"><i class="fa fa-download"></i></a></div>
+   </div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_Card2" style="display:flex;width:100%;z-index:2;" class="card">
+   <div id="Card2-card-body">
+      <div id="Card2-card-item0">Дополнительная часть</div>
+      <div id="Card2-card-item1">Рекомендуется скачать эти моды, если хотите облегчить себе жизнь (:</div>
+      <div id="Card2-card-item2"><a href="https://disk.yandex.by/d/3X3KncaCoLYIIA"><i class="fa fa-download"></i></a></div>
+   </div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="preloader"></div>
+</body>
+</html>

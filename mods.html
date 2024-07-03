@@ -6,39 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/agencydark.css" rel="stylesheet">
-<link href="css/index.css" rel="stylesheet">
+<link href="css/mods.css" rel="stylesheet">
 <script src="jquery-1.12.4.min.js"></script>
 <script src="jquery.ui.effect.min.js"></script>
-<script src="wwb18.min.js"></script>
 <script>
 $(document).ready(function()
 {
-   $('#reviewsImage1').addClass('visibility-hidden');
-   $('#portfolio-image2').addClass('visibility-hidden');
    $("a[href*='#header']").click(function(event)
    {
       event.preventDefault();
       $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeInOutCirc');
-   });
-   $("a[href*='#LayoutGrid8']").click(function(event)
-   {
-      event.preventDefault();
-      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid8').offset().top-88 }, 600, 'easeOutCirc');
-   });
-   function onScrollLayoutGrid8()
-   {
-      var $obj = $("#wb_LayoutGrid8");
-      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
-      {
-         $obj.addClass("in-viewport");
-         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
-         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
-      }
-   }
-   onScrollLayoutGrid8();
-   $(window).scroll(function(event)
-   {
-      onScrollLayoutGrid8();
    });
    $("a[href*='#services']").click(function(event)
    {
@@ -156,12 +133,12 @@ $(window).on('load', function()
 <a href="./index.html" class="nav-link button ui-state-default">Главная</a>
 </li>
 <li role="menuitem">
-<a href="#" class="button ui-state-default"><i class="fa fa-caret-down arrow"></i>Правила</a>
+<a href="#" class="button ui-state-default"><i class="fa fa-angle-down arrow"></i>Правила</a>
 <div class="submenu ui-widget-content">
 <div class="row">
 <ul>
 <li><h2>Правила сервера Minecraft</h2></li>
-<li role="menuitem"><a href="https://docs.google.com/document/d/1cPTnQt4SCrCw4Yj0E2cQqCC11Hu4cXyn93YpLomKSy4"><i class="fa fa-paper-plane icon"></i>Основные правила</a></li>
+<li role="menuitem"><a href="https://docs.google.com/document/d/1cPTnQt4SCrCw4Yj0E2cQqCC11Hu4cXyn93YpLomKSy4"><i class="fa fa-paper-plane icon"></i> Основные правила</a></li>
 <li role="menuitem"><a href="https://docs.google.com/document/d/13eBJW-IxZc8gLtfGyXkdXPoQJlK4APMWgIXREz_URis"><i class="fa fa-file icon"></i>Запрещенное и разрешенное ПО</a></li>
 <li role="menuitem"><a href="https://docs.google.com/document/d/1tRMOqO6EIemyKRpA7hJH2Pzfqqlmd2poUFyHgm9PycY"><i class="fa fa-user-o icon"></i>Устав администрации</a></li>
 </ul>
@@ -176,20 +153,9 @@ $(window).on('load', function()
 <a href="https://vk.com/uslugi-201145305?screen=group" class="nav-link button ui-state-default">Товары</a>
 </li>
 <li role="menuitem">
-<a href="./mods.html" class="nav-link button ui-state-default">Модификации на актуальную версию</a>
+<a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.1/fabric-installer-1.0.1.exe" class="nav-link button ui-state-default">install fabric</a>
 </li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_LayoutGrid8">
-<div id="LayoutGrid8">
-<div class="col-1">
-<div class="col-1-padding">
-<div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:1;">
-<img src="images/minecraft_title.png" id="Image1" alt="" width="940" height="196">
 </div>
 </div>
 </div>
@@ -200,17 +166,38 @@ $(window).on('load', function()
 <div class="row">
 <div class="col-1">
 <div class="col-1-padding">
+<div id="wb_Card1" style="display:flex;width:100%;z-index:1;" class="card">
+   <div id="Card1-card-header">Сборка от игрока Andreyka9000</div>
+   <div id="Card1-card-body">
+      <div id="Card1-card-item1">1.21 fabric (mods+textures)</div>
+      <div id="Card1-card-item2">Отлично оптимизирует игру, в комплект идет работающий fresh animations, litematica и hdr текстуры.<br><br><br><br></div>
+      <div id="Card1-card-item3"><a href="https://drive.usercontent.google.com/download?id=10lnN2gnNciLRdpLF27DoJUcaC4bZ4KzF&export=download&authuser=0"><i class="fa fa-download"></i></a></div>
+   </div>
+</div>
 </div>
 </div>
 <div class="col-2">
 <div class="col-2-padding">
-<div id="wb_Text8">
-<span style="color:#000000;font-family:Arial;font-size:13px;">IP </span><span style="color:#FF8C00;font-family:Arial;font-size:13px;"><strong>cmcraft.su</strong></span>
+<div id="wb_Card2" style="display:flex;width:100%;z-index:2;" class="card">
+   <div id="Card2-card-header">Сборка от игрока Tomon_1</div>
+   <div id="Card2-card-body">
+      <div id="Card2-card-item1">mods 1 21</div>
+      <div id="Card2-card-item2">В этой сборке нет кучи лишних модов на оптимизацию. Остались лишь важные и действительно оптимизирующие моды, а не болванки, которые только нагружают систему. Ну и один из главных плюсов, это постоянное обновление сборки.</div>
+      <div id="Card2-card-item3"><a href="https://drive.usercontent.google.com/download?id=1caE8DU1BCJjJcZ7qzY6HpEmY40FmwquU&export=download&authuser=0"><i class="fa fa-download"></i></a></div>
+   </div>
 </div>
 </div>
 </div>
 <div class="col-3">
 <div class="col-3-padding">
+<div id="wb_Card3" style="display:flex;width:100%;z-index:3;" class="card">
+   <div id="Card3-card-header">Сборка от игрока NikHokDanGD</div>
+   <div id="Card3-card-body">
+      <div id="Card3-card-item1">1.21 fabric (mods+textures)</div>
+      <div id="Card3-card-item2"><br><br>Описание отсутствует<br><br><br><br></div>
+      <div id="Card3-card-item3"><a href="./nik_dop.html"><i class="fa fa-download"></i></a></div>
+   </div>
+</div>
 </div>
 </div>
 </div>
@@ -221,81 +208,14 @@ $(window).on('load', function()
 <div class="row">
 <div class="col-1">
 <div class="col-1-padding">
-<div id="wb_Text5">
-<span style="color:#FFA500;font-family:Arial;font-size:19px;"><strong>Донат</strong></span>
-</div>
-<div id="wb_Text6">
-<span style="color:#000000;font-family:Arial;font-size:13px;">Любые формы доната у нас подчистую отсутствуют. Игроки не могут купить админку, ресурсы или префикс — абсолютно все уравнены в правах. Сервер содержится на инициативе руководства и добровольных пожертвованиях. Наши администраторы получили свои роли не за деньги, а за желание организовывать приятную и комфортную игру для каждого участника нашего сообщества.<br></span>
-</div>
 </div>
 </div>
 <div class="col-2">
 <div class="col-2-padding">
-<div id="wb_Text2">
-<span style="color:#FFA500;font-family:Arial;font-size:19px;"><strong>Наши особенности</strong></span>
-</div>
-<div id="wb_Text3">
-<span style="color:#000000;font-family:Arial;font-size:13px;">Ваша роль и вид деятельности на сервере ограничены лишь правилами и рамками игры. Быть богатым шахтёром или простым фермером, строителем или воином, главой небольшого поселения или лидером великой империи — решать только вам. Никаких плагинов на города, кланы и тому подобную бесовщину вы у нас не найдете. Вся организация и взаимодействие игроков осуществляется в свободной форме, без формальных ограничений.</span>
-</div>
-<div id="wb_Image2" style="display:inline-block;width:104px;height:104px;z-index:7;">
-<a href="https://vk.com/im?sel=-201145305"><img src="images/Без названия.png" id="Image2" alt="" width="104" height="104"></a>
-</div>
-<div id="wb_JavaScript1" style="display:inline-block;width:100%;z-index:8;">
-<div style="color:#FFA500;font-size:16px;font-family:Arial;font-weight:normal;font-style:normal;text-align:center;text-decoration:none" id="typewriter-deluxe">
-<span id="typewriter-text" style="border-right: 0.08em solid #FFA500;"></span>
-</div>
-<script>
-var data = "Подать заявку в вайтлист";
-var lines = data.split('^');
-var reverse = false;
-var index = 0;
-var text = '';
-var typeWriterElement = document.getElementById("typewriter-text");
-function typeWriterDeluxe() 
-{
-   var i = index % lines.length;
-   var line = lines[i];
-   if (reverse) 
-   {
-      text = line.substring(0, text.length - 1);
-   } 
-   else 
-   {
-      text = line.substring(0, text.length + 1);
-   }
-   typeWriterElement.innerHTML = text;
-   var timeout = 250 - Math.random() * (250/2);
-   if (reverse) 
-   { 
-      timeout /= 2; 
-   }
-   if (!reverse && text === line) 
-   {
-      timeout = 5000;
-      reverse = true;
-   } 
-   else 
-   if (reverse && text === '') 
-   {
-      reverse = false;
-      index++;
-      timeout = 500;
-   }
-   setTimeout(typeWriterDeluxe, timeout);
-}
-typeWriterDeluxe();
-</script>
-</div>
 </div>
 </div>
 <div class="col-3">
 <div class="col-3-padding">
-<div id="wb_Text4">
-<span style="color:#FFA500;font-family:Arial;font-size:19px;"><strong>Ванилла</strong></span>
-</div>
-<div id="wb_Text1">
-<span style="color:#000000;font-family:Arial;font-size:13px;"><br> У нас нет донатов, приватов, телепортов, мини-игр и прочей чепухи. <br>Игра практически полностью соответствует ванильному выживанию, которое вы привыкли видеть в одиночном Майнкрафте. <br>Это главный принцип нашего проекта.</span>
-</div>
 </div>
 </div>
 </div>
