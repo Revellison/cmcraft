@@ -9,6 +9,7 @@
 <link href="css/mods.css" rel="stylesheet">
 <script src="jquery-1.12.4.min.js"></script>
 <script src="jquery.ui.effect.min.js"></script>
+<script src="wwb18.min.js"></script>
 <script>
 $(document).ready(function()
 {
@@ -21,11 +22,6 @@ $(document).ready(function()
    {
       event.preventDefault();
       $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-88 }, 600, 'easeOutCirc');
-   });
-   $("a[href*='#LayoutGrid1']").click(function(event)
-   {
-      event.preventDefault();
-      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top-88 }, 600, 'easeOutCirc');
    });
    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {$('#preloader').remove();}
 });
@@ -41,7 +37,7 @@ $(window).on('load', function()
 <div class="col-1">
 <div id="wb_CssMenu1" style="display:inline-block;width:100%;z-index:0;">
 <ul id="CssMenu1" role="menubar" class="nav">
-<li role="menuitem" class="nav-item firstmain"><a class="nav-link CssMenu1-effect" href="./rules.html" target="_self"><i class="fa fa-address-book-o">&nbsp;</i>Правила&nbsp;&nbsp;</a>
+<li role="menuitem" class="nav-item firstmain"><a class="nav-link CssMenu1-effect" href="https://docs.google.com/document/d/1cPTnQt4SCrCw4Yj0E2cQqCC11Hu4cXyn93YpLomKSy4" target="_self"><i class="fa fa-address-book-o">&nbsp;</i>Правила&nbsp;&nbsp;</a>
 </li>
 <li role="menuitem" class="nav-item"><a class="nav-link CssMenu1-effect" href="./index.html" target="_self"><i class="fa fa-home">&nbsp;</i>Главная</a>
 </li>
@@ -61,53 +57,32 @@ $(window).on('load', function()
 <div id="wb_Card1" style="display:flex;width:100%;z-index:1;" class="card">
    <div id="Card1-card-header">Сборка от игрока Andreyka9000</div>
    <div id="Card1-card-body">
-      <div id="Card1-card-item1">1.21 fabric (mods+textures)</div>
-      <div id="Card1-card-item2">Отлично оптимизирует игру, в комплект идет работающий fresh animations, litematica и hdr текстуры.<br><br><br><br></div>
-      <div id="Card1-card-item3"><a href="https://drive.usercontent.google.com/download?id=10lnN2gnNciLRdpLF27DoJUcaC4bZ4KzF&export=download&authuser=0"><i class="fa fa-download"></i></a></div>
+      <div id="Card1-card-item1">Отлично оптимизирует игру, в комплект идет работающий fresh animations, litematica и hdr текстуры.<br><br><br><br></div>
+      <div id="Card1-card-item2"><a href="https://drive.usercontent.google.com/download?id=10lnN2gnNciLRdpLF27DoJUcaC4bZ4KzF&export=download&authuser=0" target="_blank"><i class="fa fa-download"></i></a></div>
    </div>
 </div>
 </div>
 </div>
 <div class="col-2">
 <div class="col-2-padding">
-<div id="wb_Card2" style="display:flex;width:100%;z-index:2;" class="card">
-   <div id="Card2-card-header">Сборка от игрока Tomon_1</div>
-   <div id="Card2-card-body">
-      <div id="Card2-card-item1">mods 1 21</div>
-      <div id="Card2-card-item2">В этой сборке нет кучи лишних модов на оптимизацию. Остались лишь важные и действительно оптимизирующие моды, а не болванки, которые только нагружают систему. Ну и один из главных плюсов, это постоянное обновление сборки.</div>
-      <div id="Card2-card-item3"><a href="https://drive.usercontent.google.com/download?id=1caE8DU1BCJjJcZ7qzY6HpEmY40FmwquU&export=download&authuser=0"><i class="fa fa-download"></i></a></div>
+<div id="wb_Card4" style="display:flex;width:100%;z-index:2;" class="card">
+   <div id="Card4-card-header">Сборка от игрока Tomon_1</div>
+   <div id="Card4-card-body">
+      <div id="Card4-card-item1">В этой сборке нет кучи лишних модов на оптимизацию. Остались лишь важные и действительно оптимизирующие моды, а не болванки, которые только нагружают систему. Ну и один из главных плюсов, это постоянное обновление сборки.<br></div>
+      <div id="Card4-card-item2"><a href="https://drive.usercontent.google.com/download?id=1caE8DU1BCJjJcZ7qzY6HpEmY40FmwquU&export=download&authuser=0" target="_blank"><i class="fa fa-download"></i></a></div>
    </div>
 </div>
 </div>
 </div>
 <div class="col-3">
 <div class="col-3-padding">
-<div id="wb_Card3" style="display:flex;width:100%;z-index:3;" class="card">
-   <div id="Card3-card-header">Сборка от игрока NikHokDanGD</div>
-   <div id="Card3-card-body">
-      <div id="Card3-card-item1">1.21 fabric</div>
-      <div id="Card3-card-item2"><br><br>Описание отсутствует<br><br><br><br></div>
-      <div id="Card3-card-item3"><a href="./nik_dop.html"><i class="fa fa-download"></i></a></div>
+<div id="wb_Card5" style="display:flex;width:100%;z-index:3;" class="card">
+   <div id="Card5-card-header">Сборка от игрока NikHokDanGD</div>
+   <div id="Card5-card-body">
+      <div id="Card5-card-item1">Описание отстутсвует<br><br><br><br><br><br></div>
+      <div id="Card5-card-item2"><a href="javascript:popupwnd('./nik_dop.html','no','no','no','no','no','no','500','100','700','700')" target="_self"><i class="fa fa-download"></i></a></div>
    </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_LayoutGrid1">
-<div id="LayoutGrid1">
-<div class="row">
-<div class="col-1">
-<div class="col-1-padding">
-</div>
-</div>
-<div class="col-2">
-<div class="col-2-padding">
-</div>
-</div>
-<div class="col-3">
-<div class="col-3-padding">
 </div>
 </div>
 </div>
